@@ -15,31 +15,37 @@
 var app = new Vue({
     el: '#app',
     data: {
-      tasks: [
-        {
-            task: "Fare la spesa",
-            done: "true"
-        },
-        {
-            task: "Andare a correre",
-            done: "true"
-        },
-        {
-            task: "Programmare l'esercizio di Boolean",
-            done: "false"
-        },
-        {
-            task: "Preparare pranzo",
-            done: "false"
-        },
-        {
-            task: "Andare in palestra",
-            done: "false"
-        },
-        {
-            task: "Organizzare il weekend",
-            done: "true"
-        },
-      ]
+        newTaskValue: "",
+        tasks: [
+            {
+                task: "Fare la spesa",
+                done: "true"
+            },
+            {
+                task: "Andare a correre",
+                done: "true"
+            },
+            {
+                task: "Programmare l'esercizio di Boolean",
+                done: "false"
+            },
+            {
+                task: "Preparare pranzo",
+                done: "false"
+            },
+            {
+                task: "Andare in palestra",
+                done: "false"
+            },
+            {
+                task: "Organizzare il weekend",
+                done: "true"
+            },
+      ],
+    },
+    methods: {
+        addElement: function(){
+            this.tasks.push(this.newTaskValue)
+        }
     }
   })

@@ -10,12 +10,13 @@
 </head>
 <body>
     <div id="app">
-        <input type="text">
-        <button></button>
+        <input type="text" v-model="newTaskValue">
+        <button @click="addElement"></button>
 
         <ol>
             <li v-for="task, i in tasks" :key="i">
                 {{task.task}} {{task.done}}
+                <span>&#9876;</span>
             </li>
         </ol>
 

@@ -1,24 +1,38 @@
-* {
+/* * {
     margin: 0;
     border: 0;
     box-sizing: border-box;
-}
+} */
 
 body {
     background-color: blue;
 }
 
-li {
-    font-size: 25px;
+.container {
+    display: flex;
+    justify-content: center;
 }
 
-li span {
-    font-size: 40px;
+li {
+    font-size: 25px;
+    font-weight: 1000;
 }
+
+.xrossa {
+    font-size: 40px;
+    cursor: pointer;
+    color: red;
+    font-weight: 1000;
+}
+
 input {
     height: 40px;
 }
 
 button {
     height: 40px;
+}
+
+.tasktrue {
+    text-decoration: line-through;
 }

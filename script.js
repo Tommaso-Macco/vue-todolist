@@ -15,7 +15,10 @@
 var app = new Vue({
     el: '#app',
     data: {
-        newTaskValue: "",
+        newTask: {
+            task: "",
+            done: "false"
+        },
         tasks: [
             {
                 task: "Fare la spesa",
@@ -44,8 +47,16 @@ var app = new Vue({
       ],
     },
     methods: {
-        addElement: function(){
-            this.tasks.push(this.newTaskValue)
-        }
+        addElement (){
+            this.tasks.push(this.newTask);
+            this.newTask = {
+                task: "",
+                done: "false",
+            };
+        },
+        removeElement: function (index){
+            this.tasks.splice(index, 1);
+        },
     }
-  })
+  }
+  );

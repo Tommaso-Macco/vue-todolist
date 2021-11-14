@@ -9,14 +9,19 @@
     <title>Todolist</title>
 </head>
 <body>
-    <div id="app">
-        <input type="text" v-model="newTaskValue">
-        <button @click="addElement"></button>
+    <div id="app" class="container">
+        <input type="text" v-model="newTask.task" placeholder="Scrivi la Task da fare!">
+        <button @click="addElement">Aggiungi una Task da Fare!</button>
 
         <ol>
             <li v-for="task, i in tasks" :key="i">
-                {{task.task}} {{task.done}}
-                <span>&#9876;</span>
+                <span class="tasktrue" v-if="task.done === 'true'">
+                    {{task.task}} <!-- {{task.done}} -->
+                </span>
+                <span class="taskfalse" v-else="">
+                    {{task.task}} <!-- {{task.done}} -->
+                </span>
+                <span class="xrossa" @click="removeElement(i)">&#9876;</span>
             </li>
         </ol>
 
